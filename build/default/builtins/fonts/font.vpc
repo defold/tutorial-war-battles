@@ -1,0 +1,28 @@
+
+#ifndef GL_ES
+#define lowp
+#define mediump
+#define highp
+#endif
+
+#line 0
+uniform mediump mat4 view_proj;
+
+varying mediump vec2 var_texcoord0;
+varying lowp vec4 var_face_color;
+varying lowp vec4 var_outline_color;
+
+// positions are in world space
+attribute mediump vec4 position;
+attribute mediump vec2 texcoord0;
+attribute lowp vec4 face_color;
+attribute lowp vec4 outline_color;
+attribute lowp vec4 shadow_color;
+
+void main()
+{
+    var_texcoord0 = texcoord0;
+    var_face_color = face_color;
+    var_outline_color = outline_color;
+    gl_Position = view_proj * vec4(position.x, position.y, position.z, 1.0);
+}
