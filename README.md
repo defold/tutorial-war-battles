@@ -10,11 +10,11 @@ Your game needs a setting, a map. The map that you are going to draw will be mad
 
 1. <kbd>Right click</kbd> the folder "main" and select <kbd>New ▸ Tile source</kbd>. This will create a new tile source file. Name the file "map" (full name "map.tilesource").
 
-   ![map](images/map_tilesource.jpg)
+   ![map](doc/map_tilesource.jpg)
 
 2. The new tilesource file opens automatically in the editor. Set the *Image* property of the tile source to the image file "/assets/map.png". The easiest way to do that is to click the resource selector by the *Image* property to bring up the resource selector. Then select the file "/assets/map.png":
 
-    ![tilesource](images/tilesource.jpg)
+    ![tilesource](doc/tilesource.jpg)
 
     The tiles are 16⨉16 pixels in the source image with no margins or padding so there is no need to alter the default properties of the tile source.
 
@@ -26,13 +26,13 @@ Your game needs a setting, a map. The map that you are going to draw will be mad
 
 6. Select <kbd>Edit ▸ Select Tile...</kbd>. This brings up the tile palette.
 
-    ![palette](images/palette.jpg)
+    ![palette](doc/palette.jpg)
 
 7. Click on a grass tile. This selects the clicked tile as the current brush. Then paint the tile map layer as you see fit with the grass tile. Select other tiles from the tile palette to paint different graphics.
 
 8. You can hold <kbd>Shift</kbd>, then <kbd>click and drag</kbd> to make a selection on the current layer. The selection then becomes your new brush. This is a useful way to paint with a brush consisting of multiple tiles.
 
-    ![selection](images/selection.jpg)
+    ![selection](doc/selection.jpg)
 
 When you are happy with the map, it is time to add it to the game.
 
@@ -44,21 +44,21 @@ Defold stores everything you build in *collections*. A collection is a file used
 
 2. <kbd>Right click</kbd> the root node of the collection in the *Outline* and select <kbd>Add game object</kbd>.
 
-    ![add game object](images/add_game_object.jpg)
+    ![add game object](doc/add_game_object.jpg)
 
 3. Change the *Id* property of the game object to "map". The id does not really matter for this game object but it is a good habit to set identifiers that are descriptive---it makes it easier to find your way around when you have many game objects.
 
 4. <kbd>Right click</kbd> the new game object and select <kbd>Add Component File</kbd>.
 
-    ![add component](images/add_component.jpg)
+    ![add component](doc/add_component.jpg)
 
 5. In the resource selector, pick the file "/main/map.tilemap". This creates a new component in the game object based on the tilemap file. The tile map should now appear in the editor view.
 
-    ![tilemap](images/tilemap.jpg)
+    ![tilemap](doc/tilemap.jpg)
 
 6. Run the game by selecting <kbd>Project ▸ Build</kbd> and check that everything looks good. If you feel that the window is a bit large you can open "game.project" in the project root and alter the display width and height:
 
-    ![display](images/display.jpg)
+    ![display](doc/display.jpg)
 
 ## Create the player animation
 
@@ -70,11 +70,11 @@ Defold stores everything you build in *collections*. A collection is a file used
 
 4. <kbd>Right click</kbd> the "player-down" animation group and select <kbd>Add Images...</kbd>. In the resource selector, pick the images "/assets/infantry/down/1.png" to "/assets/infantry/down/4.png". You can type "down" in the text box to filter the selection of images.
 
-    ![add images](images/add_images.png)
+    ![add images](doc/add_images.png)
 
 5. With the animation group marked, select <kbd>View ▸ Play</kbd> from the menu to preview the animation. It will play back at full 60 FPS which is way too fast. Set the playback speed (*Fps* property) to 8.
 
-    ![play animation](images/play_animation.jpg)
+    ![play animation](doc/play_animation.jpg)
 
 Now you have an atlas with a single flipbook animation for the player. This is enough for initial testing---you can add more animations later. Now, let's create the player game object.
 
@@ -96,7 +96,7 @@ A Defold game object is an object with an id, a position, a rotation and a scale
 
 7. Set the *Default Animation* property of the sprite to "player-down".
 
-    ![player sprite](images/player_sprite.jpg)
+    ![player sprite](doc/player_sprite.jpg)
 
 8. Run the game and check that the player character is animating.
 
@@ -110,7 +110,7 @@ There are no input mapped by default so you need to add input actions for your p
 
 2. Add *Key triggers* for the four arrow keys. Name the actions "up", "down", "left" and "right".
 
-    ![input](images/input_bindings.jpg)
+    ![input](doc/input_bindings.jpg)
 
 ## Create the player script
 
@@ -118,7 +118,7 @@ Unlike the sprite component, which you added directly into the "player" game obj
 
 1. <kbd>Right click</kbd> the folder "main" in the *Assets* view and select <kbd>New ▸ Script</kbd>. Name the new script file "player" (full name "player.script"). The script file, pre-filled with template functions, opens up in the editor.
 
-    ![player script](images/player_script.jpg)
+    ![player script](doc/player_script.jpg)
 
 2. Open "main.collection", <kbd>Right click</kbd> the game object "player" and select <kbd>Add Component File</kbd>. Pick the new file "/main/player.script" as the file to use for the component.
 
@@ -204,7 +204,7 @@ Start by creating the game object blueprint file:
 
 3. Add the three rocket images (in "/assets/buildings/turret-rocket") to the animation group and set the *Fps* property to a value that makes the animation look good when you preview.
 
-    ![rocket animation](images/rocket_animation.jpg)
+    ![rocket animation](doc/rocket_animation.jpg)
 
 4. Open "rocket.go" and <kbd>Right click</kbd> the root in the *Outline* and select <kbd>Add Component ▸ Sprite</kbd>.
 
@@ -222,7 +222,7 @@ Now you have a basic rocket game object blueprint, on file. The next step is to 
 
 4. Add a *Key trigger* for the firing action. Call this action "fire".
 
-    ![input](images/input_bindings_fire.jpg)
+    ![input](doc/input_bindings_fire.jpg)
 
 5. Open "main/player.script" and add a flag to track if the player is firing to the `init()` function:
 
@@ -332,15 +332,15 @@ When a rocket is spawned, it is currently not oriented in the player's direction
 
 4. Run the game and try the new mechanic. Notice that the rockets fly in the right direction but they are oriented 180 degrees wrong. That's an easy fix.
 
-    ![fire rockets](images/fire_rockets.jpg)
+    ![fire rockets](doc/fire_rockets.jpg)
 
 5. Open "sprites.atlas", select the "rocket" animation and click the *Flip horizontal* property.
 
-    ![flip rocket](images/flip_rocket.jpg)
+    ![flip rocket](doc/flip_rocket.jpg)
 
 6. Run the game again to verify that everything looks ok.
 
-    ![fire rockets](images/fire_rocket_2.jpg)
+    ![fire rockets](doc/fire_rocket_2.jpg)
 
 ## Make the rockets explode
 
@@ -350,7 +350,7 @@ The rockets should explode a short while after they are fired:
 
 2. Add the nine explosion images in "/assets/fx/explosion" to the animation group and set the *Fps* property to a value that makes the animation look good when you preview. Also make sure that this animation has the *Playback* property set to `Once Forward`.
 
-    ![explosion animation](images/explosion_animation.jpg)
+    ![explosion animation](doc/explosion_animation.jpg)
 
 3. Open "rocket.script" and scroll down to the `init()` function and change it to:
 
@@ -401,7 +401,7 @@ The rockets should explode a short while after they are fired:
 
 Run the game.
 
-![fire rockets](images/fire_rocket_3.jpg)
+![fire rockets](doc/fire_rocket_3.jpg)
 
 This is definitely getting somewhere! Now you just need something to fire the rockets at!
 
@@ -413,7 +413,7 @@ This is definitely getting somewhere! Now you just need something to fire the ro
 
 3. Add the two downwards facing images in "/assets/units/tank/down" to the animation and set it's *Fps* value to something that looks good.
 
-    ![tank animation](images/tank_animation.jpg)
+    ![tank animation](doc/tank_animation.jpg)
 
 4. Open "tank.go" and <kbd>Right click</kbd> the root in the *Outline* and select <kbd>Add Component ▸ Sprite</kbd>.
 
@@ -425,7 +425,7 @@ This is definitely getting somewhere! Now you just need something to fire the ro
 
 8. Create a few more tanks from the blueprint. Position them on the map with the *Move Tool*. Make sure to set the Z position to 1.0 so they are all rendered on top of the map.
 
-    ![tanks](images/tanks.jpg)
+    ![tanks](doc/tanks.jpg)
 
 Run the game and check that the tanks look okay.
 
@@ -441,7 +441,7 @@ When you fire at the tanks, the rockets currently fly straight through them. The
 
 4. <kbd>Right click</kbd> the "collisionobject" component in the *Outline* and select <kbd>Add Shape ▸ Box</kbd>. Set the size of the box shape to match the tank graphics.
 
-    ![tank collision](images/tank_collision.jpg)
+    ![tank collision](doc/tank_collision.jpg)
 
 6. Open "rocket.go" and <kbd>Right click</kbd> the root in the *Outline* and select <kbd>Add Component ▸ Collision Object</kbd>.
 
@@ -451,7 +451,7 @@ When you fire at the tanks, the rockets currently fly straight through them. The
 
     Now the group and mask between rockets and tanks match each other so the physics engine will detect when they interact.
 
-    ![rocket collision](images/rocket_collision.jpg)
+    ![rocket collision](doc/rocket_collision.jpg)
 
 The physics engine sends messages to game objects that collide. The last piece of the puzzle is to add code that reacts to those messages.
 
@@ -501,7 +501,7 @@ Run the game and destroy some tanks! The tanks aren't very interesting enemies, 
 
 2. Open "text.font" and set the *Font* property to the file "/assets/fonts/04font.ttf".
 
-    ![text font](images/text_font.jpg)
+    ![text font](doc/text_font.jpg)
 
 3. <kbd>Right click</kbd> the folder "main" in the *Assets* view and select <kbd>New ▸ Gui</kbd>. Name this file "ui" (full name "ui.gui"). It will contain the user interface where you will place the score counter.
 
@@ -513,7 +513,7 @@ Run the game and destroy some tanks! The tanks aren't very interesting enemies, 
 
 7. Place the text node in the top left corner of the screen.
 
-    ![ui gui](images/ui.jpg)
+    ![ui gui](doc/ui.jpg)
 
 8. <kbd>Right click</kbd> the folder "main" in the *Assets* view and select <kbd>New ▸ Gui Script</kbd>. Name this new file "ui" (full name "ui.gui_script").
 
@@ -525,7 +525,7 @@ Run the game and destroy some tanks! The tanks aren't very interesting enemies, 
 
 12. Set the *Id* property of the game object to "gui", then <kbd>Right click</kbd> it and select <kbd>Add Component File</kbd>. Select the file "/main/ui.gui". The new component will automatically get the *Id* "ui".
 
-    ![main gui](images/main_ui.jpg)
+    ![main gui](doc/main_ui.jpg)
 
 Now the score counter is displayed. You only need to add functionality in the Gui script so the score can be updated.
 
@@ -571,7 +571,7 @@ Now the score counter is displayed. You only need to add functionality in the Gu
 
 4. Try the game!
 
-![done](images/done.png)
+![done](doc/done.png)
 
 There you go! Well done!
 
