@@ -72,7 +72,7 @@ Defold stores everything you build in *collections*. A collection is a file used
 
     ![add images](doc/add_images.png)
 
-5. With the animation group marked, select <kbd>View ▸ Play</kbd> from the menu to preview the animation. It will play back at full 60 FPS which is way too fast. Set the playback speed (*Fps* property) to 8.
+5. With the animation group marked, select <kbd>View ▸ Play</kbd> from the menu to preview the animation. Press <kbd>F</kbd> to frame the animation in the editor if necessary. The animation will play back at full 60 FPS which is way too fast. Set the playback speed (*Fps* property) to 8.
 
     ![play animation](doc/play_animation.jpg)
 
