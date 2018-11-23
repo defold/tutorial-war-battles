@@ -451,6 +451,8 @@ When you fire at the tanks, the rockets currently fly straight through them. The
 
     Now the group and mask between rockets and tanks match each other so the physics engine will detect when they interact.
 
+9. Right click the "collisionobject" component in the Outline and select Add Shape ▸ Box. Set the size of the box shape to match the rocket graphics.
+
     ![rocket collision](doc/rocket_collision.jpg)
 
 The physics engine sends messages to game objects that collide. The last piece of the puzzle is to add code that reacts to those messages.
