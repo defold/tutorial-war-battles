@@ -30,7 +30,7 @@ Your game needs a setting, a map. The map that you are going to draw will be mad
 
 7. Click on a grass tile. This selects the clicked tile as the current brush. Then paint the tile map layer as you see fit with the grass tile. Select other tiles from the tile palette to paint different graphics.
 
-8. You can hold <kbd>Shift</kbd>, then <kbd>click and drag</kbd> to make a selection on the current layer. The selection then becomes your new brush. This is a useful way to paint with a brush consisting of multiple tiles.
+8. You can hold <kbd>Shift</kbd>, then <kbd>click and drag</kbd> to make a selection on the current tile map layer. The selection then becomes your new brush. This is a useful way to paint with a brush consisting of multiple tiles.
 
     ![selection](doc/selection.jpg)
 
