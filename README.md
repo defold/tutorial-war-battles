@@ -59,6 +59,8 @@ Defold stores everything you build in *collections*. A collection is a file used
 6. Run the game by selecting <kbd>Project ▸ Build</kbd> and check that everything looks good. If you feel that the window is a bit large you can open "game.project" in the project root and alter the display width and height:
 
     ![display](doc/display.jpg)
+    
+NOTE: If you get an "Out of tiles to render" error when running the game it means that the tilemap you created was larger than the maximum configured number of tiles. You can solve this by increasing the [Tilemap->Max Tile Count](https://defold.com/manuals/project-settings/#max-tile-count) value in the *game.project* file.
 
 ## Create the player animation
 
