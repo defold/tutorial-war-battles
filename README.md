@@ -377,7 +377,7 @@ The rockets should explode a short while after they are fired:
             self.life = 1000                                    -- [3]
             go.set_rotation(vmath.quat())                       -- [4]
             self.speed = 0                                      -- [5]
-            msg.post("#sprite", "play_animation", { id = hash("explosion") }) -- [6]
+            sprite.play_flipbook("#sprite", "explosion")        -- [6]
         end
     end
     ```
@@ -468,7 +468,7 @@ The physics engine sends messages to game objects that collide. The last piece o
         self.life = 1000
         go.set_rotation(vmath.quat())
         self.speed = 0
-        msg.post("#sprite", "play_animation", { id = hash("explosion") })       
+        sprite.play_flipbook("#sprite", "explosion")       
     end
     
     function update(self, dt)
