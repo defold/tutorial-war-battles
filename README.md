@@ -398,7 +398,7 @@ The rockets should explode a short while after they are fired:
     end
     ```
     1. The function `on_message()` gets called whenever a message is posted to this script component.
-    2. Check if the message posted has the hashed name (or id) "animation_done". The engine runtime sends this message whenever a sprite animation initiated with "play_animation" from this script has completed.
+    2. Check if the message posted has the hashed name (or id) "animation_done". The engine runtime sends this message whenever a sprite animation initiated with `sprite.play_flipbook()` from this script has completed.
     3. When the animation is done, delete the current game object.
 
 Run the game.
@@ -583,7 +583,7 @@ There you go! Well done!
 
 We hope you enjoyed this tutorial and that it was helpful. To get to know Defold better, we suggest that you to continue working with this little game. Here are a few suggested exercises:
 
-1. Add directional animations for the player character. Tip, add a function called `update_animation(self)` to the `update()` function and change the animation depending on the value of the `self.dir` vector. It is also worth remembering that if you send a "play_animation" message each frame to a sprite, the animation will restart from the beginning, each frame---so you should only send "play_animation" when the animation should change.
+1. Add directional animations for the player character. Tip, add a function called `update_animation(self)` to the `update()` function and change the animation depending on the value of the `self.dir` vector. It is also worth remembering that if you call `sprite.play_flipbook()` on a sprite, the animation will restart from the beginning, each frame---so you should only call `sprite.play_flipbook()` when the animation should change.
 
 2. Add an "idle" state to the player character so it only plays a walking animation when moving.
 
