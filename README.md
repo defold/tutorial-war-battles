@@ -413,7 +413,7 @@ This is definitely getting somewhere! Now you just need something to fire the ro
 
 2. Open "sprites.atlas" and create a new animation group (right click the root node and select <kbd>Add Animation Group</kbd>). Name the animation "tank-down".
 
-3. Add the two downwards facing images in "/assets/units/tank/down" to the animation and set it's *Fps* value to something that looks good.
+3. Add the two downwards facing images in "/assets/units/tank/down" to the animation and set its *Fps* value to something that looks good.
 
     ![tank animation](doc/tank_animation.jpg)
 
