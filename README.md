@@ -2,7 +2,7 @@
 
 This tutorial goes through the steps needed to create a small playable game embryo in Defold. You do not need to have any prior experience with Defold, but if you have done some programming in Lua, Javascript, Python or similar, that will help.
 
-You start with an empty project but we have added the required assets for you. You can verify that the project is empty by [building and running it](defold://build) (or selecting <kbd>Project ▸ Build</kbd> from the menu). This will launch the game and you should see nothing but a black window.
+You start with an empty project but we have added the required assets for you. You can verify that the project is empty by [building and running it](defold://project.build) (or selecting <kbd>Project ▸ Build</kbd> from the menu). This will launch the game and you should see nothing but a black window.
 
 ## Draw the game map
 
